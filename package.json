@@ -1,0 +1,21 @@
+{
+  "name": "tiny-apps",
+  "description": "Tiny Apps",
+  "author": "Kyle P Davis",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html */index.html --open",
+    "build": "parcel build index.html */index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "eslint": "^6.5.1",
+    "prettier": "^1.18.2",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1"
+  }
+}
