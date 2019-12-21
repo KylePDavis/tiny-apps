@@ -6,16 +6,23 @@
   "private": true,
   "license": "MIT",
   "main": "index.html",
+  "browserslist": ">2%",
   "scripts": {
-    "start": "parcel index.html */index.html --open",
-    "build": "parcel build index.html */index.html"
+    "start": "parcel serve --port ${PORT:-9000} --hmr-port ${HMR_PORT:-9001} index.html '!(dist)/index.html'",
+    "build": "parcel build index.html '!(dist)/index.html'",
+    "lint": "yarn prettier:all && yarn eslint:all",
+    "lint:fix": "yarn prettier:all --write && yarn eslint:all --fix",
+    "eslint:all": "yarn eslint:file .",
+    "eslint:file": "eslint --ext js,jsx,ts,tsx",
+    "prettier:all": "yarn prettier:file '**/*.{json,md,yml}'",
+    "prettier:file": "prettier --check"
   },
   "dependencies": {},
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
     "eslint": "^6.5.1",
-    "prettier": "^1.18.2",
     "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-prettier": "^3.1.1"
+    "eslint-plugin-prettier": "^3.1.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.18.2"
   }
 }
