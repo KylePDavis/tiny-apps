@@ -18,7 +18,10 @@ ${getAppListHTML(apps)}
 const appEl = document.getElementById("app");
 appEl.innerHTML = getAppHTML({
     apps: [
-        { id: "map", name: "Map" }
+        { id: "map", name: "Map" },
+        { id: "dice", name: "Dice" },
+        { id: "pixel_draw", name: "Pixel Draw" },
+        { id: "winter19_puzzles", name: "Winter19 Puzzles" }
     ]
 });
 
