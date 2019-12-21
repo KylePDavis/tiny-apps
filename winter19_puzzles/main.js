@@ -1,5 +1,5 @@
 //@ts-check
-import * as ui from "../ui";
+import * as ui from "../ui.js";
 const { isSafeInteger: isInt, isFinite: isNum, parseFloat: asNum } = Number;
 
 /** @type {{ s?: string, u?: string }} */

@@ -1,4 +1,4 @@
-import * as ui from "../ui";
+import * as ui from "../ui.js";
 
 const appEl = document.getElementById("app");
 if (!appEl) throw new Error("Expected app element!");
